@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8" />
+    <title>Singe page App</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- attribute that include html templates from views folder  -->
+  <div ng-view></div>
+
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+
+  <script src="js/controllers/auth-ctrl.js" type="text/javascript"></script>
+  <script src="js/controllers/user-ctrl.js" type="text/javascript"></script>
+  <script src="js/controllers/admin-ctrl.js" type="text/javascript"></script>
+
+  <script src="js/services/storage-service.js"></script>
+  <script src="js/services/admin-provider-service.js"></script>
+
+  <script src="js/app.js" type="text/javascript"></script>
+
+</body>
+</html>

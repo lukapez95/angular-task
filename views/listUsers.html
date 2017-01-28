@@ -1,0 +1,30 @@
+<div class="container col-md-offset-2 col-md-6">
+
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="#!/listUsers">List Users</a></li>
+  <li role="presentation" ng-click="logOut()"><a>Log out</a></li>
+</ul>
+
+<table class="table table-striped">
+
+  <thead>
+    <tr>
+      <th>Name:</th>
+      <th>Surname:</th>
+      <th>Email:</th>
+      <th>Date of registration:</th>
+      <th>Date of last modification:</th>
+    </tr>
+  </thead>
+
+  <tbody ng-repeat="user in users" ng-click="viewUser(user.id)">
+    <td>{{user.name}}</td>
+    <td>{{user.surname}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.dateOfReg | date: 'dd/MM/yyyy'}}</td>
+    <td>{{user.dateOfLastMod | date: 'dd/MM/yyyy'}}</td>
+  </tbody>
+
+</table>
+
+</div>

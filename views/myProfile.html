@@ -1,0 +1,19 @@
+<div class="container col-md-offset-2 col-md-6">
+
+<ul class="nav nav-pills">
+  <li role="presentation" class="active" ng-if="!loggedUser.isAdmin"><a href="#!/myProfile">My Profile</a></li>
+  <li role="presentation" class="active" ng-if="loggedUser.isAdmin"><a>View User</a></li>
+  <li role="presentation" ng-if="loggedUser.isAdmin"><a href="#!/editUser">Edit User</a></li>
+  <li role="presentation" ng-if="!loggedUser.isAdmin"><a href="#!/editProfile">Edit Profile</a></li>
+  <li role="presentation" ng-if="!loggedUser.isAdmin" ng-click="logOut()"><a>Log out</a></li>
+</ul>
+
+<ul class="list-group">
+  <li class="list-group-item">Name:<label>{{user.name}}</label></li>
+  <li class="list-group-item">Surname:<label>{{user.surname}}</label></li>
+  <li class="list-group-item">Email:<label>{{user.email}}</label></li>
+  <li class="list-group-item">Date of registration:<label>{{user.dateOfReg | date: 'dd/MM/yyyy'}}</label></li>
+  <li class="list-group-item">Date of last modification:<label>{{user.dateOfLastMod | date: 'dd/MM/yyyy'}}</label></li>
+</ul>
+
+</div>
